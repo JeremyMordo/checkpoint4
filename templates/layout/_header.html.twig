@@ -5,17 +5,23 @@
     </button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item align-self-center">
-          <a href="#" class="nav-link text-uppercase font-weight-bold">Portefolio</a>
+        <li class="nav-item align-self-center px-2">
+          <a href="{{ path('portfolio')}}" class="nav-link text-uppercase font-weight-bold">Portefolio</a>
         </li>
-        <li class="nav-item align-self-center">
-          <a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a>
+        <li class="nav-item align-self-center px-2">
+          <a href="{{ path('guestbook')}}" class="nav-link text-uppercase font-weight-bold">Livre d'or</a>
+        </li>
+        <li class="nav-item align-self-center px-2">
+          <a href="{{ path('contact')}}" class="nav-link text-uppercase font-weight-bold">Contact</a>
         </li>
         {% if app.user %}
-        <li class="nav-item">
+        <li class="nav-item align-self-center px-2">
           <a class="nav-link" href="{{ path('app_logout') }}">
             <img class="logo-deconnexion" src="{{ asset('build/images/deconnexion.png') }}"/>
           </a>
+        </li>
+        <li class="nav-item align-self-center firstname-user">
+          Bonjour {{ app.user.firstname }}
         </li>
         {% else %}
         <li class="nav-item align-self-center">

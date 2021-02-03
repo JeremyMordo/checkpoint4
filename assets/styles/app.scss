@@ -68,9 +68,10 @@ body {
 }
 
 /* Change navbar styling on small viewports */
+
 @media (max-width: 991.98px) {
     .navbar {
-        background: #fff;
+        background: $card-color;
     }
 
     .navbar .navbar-brand, .navbar .nav-link {
@@ -78,16 +79,88 @@ body {
     }
 }
 
-// Index //
+// Connection //
 
-.block-noms-liens {
-    background-color: white;
+.formular-title {
+    font-size: 2rem;
+    height: 3rem;
 }
 
-.avatar {
-    width: 10em;
+.firstname-user {
+    text-decoration: underline;
+}
+
+// Index //
+
+
+.block-noms-liens, .block-course, .block-objective {
+    background-color: $card-color;
+    min-width: 80%;
+    min-height: 300px;
+}
+
+.block-course {
+    align-self: end;
+}
+
+.avatar, .laptop, .target {
+    width: 100%;
+    height: 80%;
 }
 
 .vide {
     height: 5em;
 }
+
+.firstname-lastname {
+    font-size : 3rem;
+}
+
+.job-title {
+    font-size : 2rem;
+}
+
+.link-network {
+    width: 2rem;
+}
+
+.course, .objectives{
+    font-size: 1.5rem;
+}
+
+.course-title {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 995px) {
+    .block-noms-liens, .block-course, .block-objective {
+        flex-direction: column;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+// Guestbook //
+
+
+.blockquote-custom {
+    position: relative;
+    font-size: 1.1rem;
+    }
+
+    .blockquote-custom-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: 50px;
+    }
+
+// Portfolio //
+

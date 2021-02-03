@@ -4,13 +4,108 @@
 
 {% block body %}
 
-<div class="container">
+<div class="container block-container d-flex flex-column">
     <div class="row vide">
     </div>
-    <div class="block-noms-liens col-8">
-        <img class="avatar" src="{{ asset('build/images/avatar.png') }}">
+    <div class="d-flex align-items-center align-self-start block-noms-liens row col-10">
+        <div class="img-card col-4">
+            <img class="avatar" src="{{ asset('build/images/avatar.png') }}">
+        </div>
+        <div class="col-8 d-flex flex-column align-items-center justify-content-center">
+            <div class="firstname-lastname text-center">MORDO Jeremy</div>
+            <div class="job-title text-center">Développeur Web et Mobile</div>
+            <div class="honnest text-center">Spécialisé Back-end</div>
+            <div class="d-flex pt-3">
+                <a href="https://github.com/JeremyMordo" target="_blank" class="nav-link text-uppercase font-weight-bold">
+                    <img class="link-network" src="{{ asset('build/images/github.png') }}"/>
+                </a>
+                <a href="https://www.linkedin.com/in/jeremy-mordo/" target="_blank" class="nav-link text-uppercase font-weight-bold">
+                    <img class="link-network" src="{{ asset('build/images/linkedin.png') }}"/>
+                </a>
+                <a href="https://www.canva.com/design/DAENed00zt4/lu0wNnuYd8YbmEkLI0bsBQ/view?utm_content=DAENed00zt4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" class="nav-link text-uppercase font-weight-bold">
+                    <img class="link-network" src="{{ asset('build/images/cv.png') }}"/>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="row vide">
+    </div>
+    <div class="d-flex align-items-center align-self-end block-course row col-10">
+        <div class="img-card col-5">
+            <img class="laptop" src="{{ asset('build/images/laptop.png') }}">
+        </div>
+        <div class="col-7 d-flex flex-column align-items-center justify-content-center">
+            <div class="course text-center d-flex flex-column justify-content-between">
+                <div class="course-title pb-3">
+                    Mon parcours :
+                </div>
+                <div class="pb-2">
+                    Après 10 ans d'optique lunetterie, je me suis reconverti dans le développement Web.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row vide">
+    </div>
+    <div class="d-flex align-items-center align-self-start block-objective row col-10">
+        <div class="img-card col-5">
+            <img class="target" src="{{ asset('build/images/objectif.png') }}">
+        </div>
+        <div class="col-7 d-flex flex-column align-items-center justify-content-center">
+            <div class="course text-center d-flex flex-column justify-content-between">
+                <div class="course-title pb-3">
+                    Mes objectifs :
+                </div>
+                <div class="pb-2">
+                    Le monde du développement web étant sans limite, je souhaite en apprendre le maximum.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row vide">
+    </div>
+    <div class="d-flex align-items-center align-self-end block-objective row col-10 mb-5">
+        <div class="img-card col-5">
+            <img class="target" src="{{ asset('build/images/competences.png') }}">
+        </div>
+        <div class="col-7 d-flex flex-column align-items-center justify-content-around">
+            <div class="course text-center d-flex flex-column justify-content-between">
+                <div class="course-title pb-3">
+                    Compétences techniques : 
+                </div>
+                <div class="score d-flex justify-content-around">
+                    <div>
+                        <ul>
+                            <li> Symfony
+                            </li>
+                            <li> Php
+                            </li>
+                            <li> POO
+                            </li>
+                            <li> HTML/CSS
+                            </li>
+                            <li> Twig
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li> Bootstrap
+                            </li>
+                            <li> UNIX
+                            </li>
+                            <li> Javascript
+                            </li>
+                            <li> Git(Github)
+                            </li>
+                            <li> MySql (PhpMyAdmin)
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

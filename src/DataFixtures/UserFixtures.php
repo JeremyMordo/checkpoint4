@@ -8,7 +8,6 @@ use App\Entity\User;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Faker;
 
-
 class UserFixtures extends Fixture
 {
     private $passwordEncoder;
@@ -50,7 +49,7 @@ class UserFixtures extends Fixture
             $user->setFirstname($faker->firstName($gender = 'male' | 'female'));
             $user->setLastname($faker->lastName());
             $user->setEmail($faker->email());
-            $user->setRoles(['ROLE_user']);
+            $user->setRoles(['ROLE_USER']);
             $user->setPassword($this->passwordEncoder->encodePassword($user, $faker->word()));
             $this->addReference('user_' . $i, $user);
 

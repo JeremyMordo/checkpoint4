@@ -1,7 +1,31 @@
 {% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {% block title %}Page de contact{% endblock %}
 
 {% block body %}
-    Hello World !
-{% endblock %}
+{{ form_start(form) }}
+    <div class="custom_errors">
+        {{ form_errors(form) }}
+    </div>
+    <div class="label-form">
+        <div class="row">
+            <div class="col-6 col-12-sm">
+                {{ form_row(form.name) }}
+            </div>
+            <div class="col-6 col-12-sm">
+                {{ form_row(form.email) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{ form_row(form.message) }}
+            </div>
+        </div>
+    </div>
+    <div class="row col-11 d-flex justify-content-center">
+            <button class="btn btn-lg btn-primary mt-3" type="submit">
+                Valider votre message
+            </button>
+    </div>
+{{ form_end(form) }}{% endblock %}
