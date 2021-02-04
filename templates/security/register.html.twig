@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Enregistrement{% endblock %}
+
+{% block body %}
+    <div class="row d-flex flex-column align-items-center justify-content-center">
+
+        {% for flashError in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+        {% endfor %}
+
+        <h1 class="h3 mb-3 font-weight-normal formular-title d-flex justify-content-center align-items-center">Enregistrez-vous</h1>
+
+        {{ form_start(form) }}
+        <div class="form-group d-flex flex-column align-items-center">
+            {{ form_label(form.email, 'Votre email', {'label_attr': {'class': ''}}) }}
+            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+
+            {{ form_label(form.lastname, 'Votre nom', {'label_attr': {'class': ''}}) }}
+            {{ form_widget(form.lastname, {'attr': {'class': 'form-control'}}) }}
+            
+            {{ form_label(form.firstname, 'Votre prénom', {'label_attr': {'class': ''}}) }}
+            {{ form_widget(form.firstname, {'attr': {'class': 'form-control'}}) }}
+
+            {{ form_label(form.plainPassword, 'Votre mot de passe', {'label_attr': {'class': ''}}) }}
+            {{ form_widget(form.plainPassword, {'attr': {'class': 'form-control'}}) }}
+
+            <button type="submit" class="btn btn-lg btn-primary mt-3 underline">
+                Enregistrement
+            </button>
+
+            {{ form_end(form) }}
+        </div>
+        <div class="row mt-3 d-flex justify-content-center register">
+            <a class="underline pl-2" href="{{ path('app_login') }}">Revenir à la page de connexion !</a>
+        </div>
+    </div>
+{% endblock %}

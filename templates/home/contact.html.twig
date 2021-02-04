@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Page de contact{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+    <div class="custom_errors">
+        {{ form_errors(form) }}
+    </div>
+    <div class="label-form row d-flex justify-content-center">
+        <div class="row col-6 d-flex flex-column">
+                {{ form_row(form.name) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.message) }}
+        </div>
+    </div>
+    <div class="row col-12 d-flex justify-content-center">
+            <button class="btn btn-lg btn-primary mt-3 underline" type="submit">
+                Valider votre message
+            </button>
+    </div>
+{{ form_end(form) }}
+{% endblock %}
