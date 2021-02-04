@@ -50,7 +50,7 @@ class User implements UserInterface
     private $lastname;
 
     /**
-     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="author")
+     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="author", cascade={"remove"})
      */
     private $comments;
 

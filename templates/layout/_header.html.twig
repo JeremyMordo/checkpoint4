@@ -9,7 +9,7 @@
           <a href="{{ path('portfolio')}}" class="nav-link text-uppercase font-weight-bold">Portefolio</a>
         </li>
         <li class="nav-item align-self-center px-2">
-          <a href="{{ path('guestbook')}}" class="nav-link text-uppercase font-weight-bold">Livre d'or</a>
+          <a href="{{ path('comment_index')}}" class="nav-link text-uppercase font-weight-bold">Livre d'or</a>
         </li>
         <li class="nav-item align-self-center px-2">
           <a href="{{ path('contact')}}" class="nav-link text-uppercase font-weight-bold">Contact</a>
@@ -21,7 +21,17 @@
           </a>
         </li>
         <li class="nav-item align-self-center firstname-user">
-          Bonjour {{ app.user.firstname }}
+          {{ app.user.firstname }}
+          {% if is_granted("ROLE_ADMIN") %}
+          <li class="nav-item align-self-center pl-2">
+          -
+          </li>
+          <li class="nav-item align-self-center">
+            <a href="{{ path('dashboard')}}" class="nav-link text-uppercase font-weight-bold">
+              Admin
+            </a>
+          </li>
+          {% endif %}
         </li>
         {% else %}
         <li class="nav-item align-self-center">

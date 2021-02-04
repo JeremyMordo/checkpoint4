@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Comment{% endblock %}
+
+{% block body %}
+<div class="row d-flex flex-column align-items-center">
+    <h1 class="col-8 text-center">Laissez-moi un commentaire :</h1>
+
+    {{ include('home/comment/_form.html.twig') }}
+
+    <a class="underline my-3" href="{{ path('comment_index') }}">Revenir à la liste des commentaires</a>
+</div>
+{% endblock %}
