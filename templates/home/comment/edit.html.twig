@@ -3,11 +3,9 @@
 {% block title %}Edit Comment{% endblock %}
 
 {% block body %}
-    <h1>Edit Comment</h1>
-
-    {{ include('comment/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('comment_index') }}">back to list</a>
-
-    {{ include('comment/_delete_form.html.twig') }}
+    <div class="row d-flex flex-column align-items-center">
+        <h1 class="col-8 text-center">Modifier un commentaire :</h1>
+        {{ include('home/comment/_form.html.twig', {'button_label': 'Update'}) }}
+        <a class="underline my-3" href="{{ path('comment_index') }}">Revenir à la liste des commentaires</a>
+    </div>
 {% endblock %}
